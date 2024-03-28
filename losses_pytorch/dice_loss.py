@@ -3,11 +3,14 @@ get_tp_fp_fn, SoftDiceLoss, and DC_and_CE/TopK_loss are from https://github.com/
 """
 
 import torch
-from ND_Crossentropy import CrossentropyND, TopKLoss, WeightedCrossEntropyLoss
+# from ND_Crossentropy import CrossentropyND, TopKLoss, WeightedCrossEntropyLoss
 from torch import nn
 from torch.autograd import Variable
 from torch import einsum
 import numpy as np
+
+from loss_func.SegLossOdyssey.losses_pytorch.ND_Crossentropy import CrossentropyND, TopKLoss, WeightedCrossEntropyLoss
+
 
 def softmax_helper(x):
     # copy from: https://github.com/MIC-DKFZ/nnUNet/blob/master/nnunet/utilities/nd_softmax.py
